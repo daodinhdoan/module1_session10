@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+        <img id="img1" src="./Img/c1.jpg" height="100px" width="600px" onclick="chamimg1()"> <br>
+        <img id="img2" src="./Img/g3.jpg" height="89px" width="600px" onclick="chamimg2()"><br>
+        <img id="img3" src="./Img/k1.jpg" height="89px" width="600px" onclick="chamimg3()"/>
+        <script>
+            let con1 = 0;
+            let con2 = 1;
+            let con3 = 2;
+            function chamimg1() {
+            let img1 = document.getElementById('img1');
+            let img2 = document.getElementById('img2');
+            let img3 = document.getElementById('img3');
+                con1++ ;
+                if (con1 == 1 ) {
+                    img1.src = "./Img/c1.jpg"                   
+                }else if (con1 == 2){
+                    img1.src = "./Img/g1.jpg"   
+                }else {
+                    img1.src ='Img/k1.jpg';
+                    con1 =  0;
+            }
+                console.log ( 'con1 trong ham 1', con1)
+                checkshadow()
+            }
+                function  chamimg2(){
+                    con2++ ;
+                    if (con2 == 1){
+                        img2.src = './Img/c2.jpg';
+                    }else if(con2 == 2){
+                        img2.src = './Img/g2.jpg' ;
+                    }else {
+                        img2.src = './Img/k2.jpg'  ; 
+                        con2 = 0 ;
+                 }
+                 console.log('con2 trong ham 2 ',con2)
+                 checkshadow()
+            }
+                function chamimg3(){
+                    con3++ ;
+                    if (con3 == 1){
+                        img3.src ='./Img/c3.jpg';
+                    }else if(con3 == 2){
+                        img3.src = './Img/g3.jpg' ;
+                    }else {
+                        img3.src = './Img/k3.jpg';
+                        con3 = 0
+                    }  
+                 console.log('con3 trong ham 3',con3)
+                 checkshadow()
+             }
+                        
+                
+             
+             console.log('con1 = ',con1);
+             console.log('con2 = ',con2);    
+             console.log('con3 = ',con3);         
+                    function checkshadow(){
+                        if (con1 == con2 && con2 == con3) {
+                            console.log('khong vao day'); 
+                            img1.style.boxShadow = 'red 4px 4px 9px'
+                            img2.style.boxShadow = 'red 4px 4px 9px'
+                            img3.style.boxShadow = 'red 4px 4px 9px'
+                        } else{
+                            img1.style.boxShadow = 'blue 4px 4px 9px'
+                            img2.style.boxShadow = 'blue 4px 4px 9px'
+                            img3.style.boxShadow = 'blue 4px 4px 9px'
+                    }     
+                    }
+        
+        
+        
+        
+         </script>
+ </body>
+ 
+ </html>
